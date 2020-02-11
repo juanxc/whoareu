@@ -1,0 +1,14 @@
+.img-card{
+    width: 150px;
+    border: 2px solid var(--template-color-2);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.28);
+    border-radius: 3px;
+    margin: 15px;
+    display: inline-block;
+}
+.datosPersona-card{
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    padding: 15px;
+}

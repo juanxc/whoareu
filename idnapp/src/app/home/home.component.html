@@ -1,0 +1,22 @@
+<div style="padding: 10px;">
+    <mat-card>
+        <label>DNI: </label>
+        <input type="text" maxlength="8" #dni>
+        <button mat-button (click)="buscarPersona(dni.value)">Buscar</button>
+    </mat-card>
+</div>
+<div style="padding: 13px">
+    <p *ngIf="!existePersona">No se encontraron resultados</p>
+    <mat-card *ngIf="existePersona" style="margin-top: 10px;">
+        <mat-card-header>
+        </mat-card-header>
+        <mat-card-content>
+            <img class="img-card" [src]="objPersona.strImagen" />
+            <div class="datosPersona-card">
+                <div><label>Nombres: </label><p>{{objPersona.strNombres}}</p></div>
+                <div><label>Apellido Paterno: </label><p>{{objPersona.strApellidoPaterno}}</p></div>
+                <div><label>Apellido Materno: </label><p>{{objPersona.strApellidoMaterno}}</p></div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

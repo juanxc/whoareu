@@ -1,0 +1,6 @@
+<label>
+    DNI:
+    <input type="text" maxlength="8" [formControl] = "dni">
+    <button (click)="buscarPersona()">Buscar</button>
+    <p>dni: {{dni.value}}</p>
+</label>
