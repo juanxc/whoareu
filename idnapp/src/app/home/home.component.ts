@@ -1,5 +1,6 @@
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
+import { Persona } from './../interfaces/persona';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  objPersona = [];
+  objPersona: Persona;
   existePersona = false;
   constructor(private apiService: ApiService) { }
 
@@ -15,9 +16,9 @@ export class HomeComponent implements OnInit {
   }
 
   buscarPersona(vdni: string) {
-    this.apiService.get(vdni).subscribe((response) => {
+    this.apiService.get(vdni).subscribe((response: any) => {
       console.log('response', response);
-      if(response.success){
+      if (response.success) {
         this.existePersona = true;
         this.objPersona = response.data;
         this.objPersona.strImagen = 'data:image/jpeg;base64,' + this.objPersona.strImagen;

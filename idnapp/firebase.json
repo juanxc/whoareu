@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "idnapp",
+      "public": "dist/idnapp",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

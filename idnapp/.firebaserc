@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "whoareu-a0dd4": {
+      "hosting": {
+        "idnapp": [
+          "whoareu-a0dd4"
+        ]
+      }
+    }
+  }
+}

@@ -14,4 +14,7 @@ export class DniFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  buscarPersona() {
+    console.log('');
+  }
 }
